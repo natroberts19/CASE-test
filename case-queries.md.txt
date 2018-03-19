@@ -1,0 +1,43 @@
+QUERIES
+Sort:
+------------------------------------------------------
+db.students.find().sort({ lastName:1 }).pretty();
+
+Counts the records that meet the criteria:
+------------------------------------------------------
+db.students.aggregate(
+  [
+    {
+      $match: {
+        numContacts: {
+          $gt: 1
+        }
+      }
+    },
+    {
+      $count: "> 2 contacts"
+    }
+  ]
+)
+
+Returns all matching records that meet the criteria:
+-------------------------------------------------------
+db.students.find( { numContacts: { $lt: 2 } } )
+db.students.find( { numContacts: { $gt: 2 } } )
+
+Update individual records:
+-------------------------------------------------------
+db.students.update( { "studentId": { $eq: '5252361' } }, { $set: { advisor: 'Karen' } } )
+
+Query all active students with less than 2 contacts:
+-------------------------------------------------------
+db.students.find( { $and: [ { studentStatus: { $eq: 'active' } }, { numContacts: { $lt: 2 } } ] } )
+
+Query all active students for each Advisor:
+-------------------------------------------------------
+db.students.find( { $and: [ { studentStatus: { $eq: 'active' } }, { advisor: { $eq: 'Karen' } } ] } )
+
+Join Notes to Students:
+-------------------------------------------------------
+https://docs.mongodb.com/master/reference/operator/aggregation/lookup/#examples
+
