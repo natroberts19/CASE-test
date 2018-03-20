@@ -40,7 +40,7 @@ db.on("error", function(error) {
   console.log("Database Error:", error);
 });
 
-// Routes.
+// ROUTES.
 // require("./routes/html-routes.js")(app);
 // require("./routes/api-student-routes.js")(app);
 // require("./routes/api-note-routes.js")(app);
@@ -48,7 +48,7 @@ db.on("error", function(error) {
 // Pull these queries out and create models and separate routes.
 // 1. At the "/all" path, display every entry in the students collection.
 app.get("/all", function(req, res) {
-  // Query: In our database, go to the students collection, then "find" everything
+  // Query: In our database, go to the students collection, then "find" everything.
   db.students.find({}, function(error, found) {
   // Log any errors if the server encounters one.
   if (error) {
@@ -60,6 +60,20 @@ app.get("/all", function(req, res) {
   }
   });
 });
+
+// Find your students by logged in advisor.
+app.get("/advisor", function(req, res) {
+    db.students.find({ $and: [ { studentStatus: { $eq: 'active' } }, { advisor: { $eq: 'Natalie' } } ]}, function(error, found) {
+    // Log any errors if the server encounters one
+    if (error) {
+        console.log(error);
+    }
+    // Otherwise, send the result of this query to the browser
+    else {
+        res.json(found);
+    }
+    });
+  });
 
 // 2. At the "/lastName" path, display every entry in the students collection, sorted by last name.
 app.get("/lastName", function(req, res) {
@@ -101,6 +115,24 @@ app.get("/contacts", function(req, res) {
     else {
         res.json(found);
     }
+    });
+  });
+
+// At the /api/new endpoint, capture all new student form submissions.
+// Handle form submission, save submission to mongo
+app.post("/api/new", function(req, res) {
+    console.log("new stud req.body: ", req.body);
+    // Insert the form data into the students collection.
+    db.students.insert(req.body, function(error, saved) {
+      // Log any errors
+      if (error) {
+        console.log(error);
+      }
+      else {
+        // Otherwise, send the note back to the browser
+        // This will fire off the success function of the ajax request
+        res.send(saved);
+      }
     });
   });
 

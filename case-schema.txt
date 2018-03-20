@@ -1,13 +1,13 @@
 STUDENTS
-db.students.insert({studentId: '1234567', firstName: 'Natalie', lastName:'Roberts', phone: '407-555-1212', email: 'nat123@gmail.com', program: 'ged', schedule: '8am', campus: 'Main', studentStatus: 'active', numContacts: 3, goal: 'college', highLevelEd: 'masters', result: '', advisor: 'Diana', contactDate: '03/18/2018', notes: [], files: []})
+db.students.insert({studentId: '1356245', firstName: 'David', lastName:'Gonzalez', phone: '407-555-1212', email: 'dav123@gmail.com', program: 'esol', schedule: '8am', campus: 'CHS', studentStatus: 'active', numContacts: 1, goal: 'job', highLevelEd: 'hs', result: '', advisor: 'Natalie', contactDate: '03/02/2018', notes: [], files: []})
 
-db.students.insert({studentId: '3654798', firstName: 'Millie', lastName:'Abel', phone: '407-555-1212', email: 'mill123@gmail.com', program: 'ged', schedule: '8am', campus: 'Main', studentStatus: 'active', numContacts: 3, goal: 'college', highLevelEd: 'hs', result: '', advisor: 'Diana', contactDate: '03/18/2018', notes: [], files: []})
+db.students.insert({studentId: '6547798', firstName: 'Monica', lastName:'Smith', phone: '407-555-1212', email: 'mon123@gmail.com', program: 'abe', schedule: '10am', campus: 'Poinciana', studentStatus: 'inactive', numContacts: 6, goal: 'college', highLevelEd: 'hs', result: 'college', advisor: 'Natalie', contactDate: '03/18/2018', notes: [], files: []})
 
-db.students.insert({studentId: '5252361', firstName: 'Riley', lastName:'Monroe', phone: '407-555-1212', email: 'ril123@gmail.com', program: 'ged', schedule: '1pm', campus: 'Main', studentStatus: 'active', numContacts: 3, goal: 'college', highLevelEd: 'hs', result: '', advisor: 'Diana', contactDate: '03/18/2018', notes: [], files: []})
+db.students.insert({studentId: '5251234', firstName: 'Rodrigo', lastName:'Mendez', phone: '407-555-1212', email: 'rod123@gmail.com', program: 'esol', schedule: '1pm', campus: 'Main', studentStatus: 'active', numContacts: 8, goal: 'promotion', highLevelEd: '4yr', result: '', advisor: 'Karen', contactDate: '03/18/2018', notes: [], files: []})
 
-db.students.insert({studentId: '7458962', firstName: 'Baxter', lastName:'Simpson', phone: '407-555-1212', email: 'bax123@gmail.com', program: 'ged', schedule: '5pm', campus: 'KMS', studentStatus: 'active', numContacts: 3, goal: 'college', highLevelEd: '4yr', result: '', advisor: 'Diana', contactDate: '03/18/2018', notes: [], files: []})
+db.students.insert({studentId: '9856962', firstName: 'Bonnie', lastName:'Bell', phone: '407-555-1212', email: 'bax123@gmail.com', program: 'abe', schedule: '5pm', campus: 'Main', studentStatus: 'active', numContacts: 2, goal: 'ged', highLevelEd: '<hs', result: '', advisor: 'Natalie', contactDate: '02/18/2018', notes: [], files: []})
 
-db.students.insert({studentId: '3215879', firstName: 'Sally', lastName:'Simeon', phone: '407-555-1212', email: 'sall123@gmail.com', program: 'ged', schedule: '10am', campus: 'Poinciana', studentStatus: 'inactive', numContacts: 3, goal: 'college', highLevelEd: 'masters', result: 'job', advisor: 'Diana', contactDate: '03/18/2018', notes: [], files: []})
+db.students.insert({studentId: '4215879', firstName: 'Steve', lastName:'Santos', phone: '407-555-1212', email: 'stev123@gmail.com', program: 'esol', schedule: '8am', campus: 'Poinciana', studentStatus: 'active', numContacts: 4, goal: 'college', highLevelEd: 'hs', result: '', advisor: 'Karen', contactDate: '03/07/2018', notes: [], files: []})
 
 ------------------------------------------------
 NOTES

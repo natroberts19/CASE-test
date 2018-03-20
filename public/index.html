@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <link href="https://bootswatch.com/4/litera/bootstrap.min.css" rel ="stylesheet" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous" />
+  <link href="https://bootswatch.com/4/litera/bootstrap.min.css" rel="stylesheet" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -21,26 +23,30 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>CASE</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="https://natroberts19.github.io/">Navbar</a>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
+  <title>CASE</title>
+</head>
 
-        <div className="collapse navbar-collapse" id="navbarColor02">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="https://natroberts19.github.io/">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <!-- <li className="nav-item">
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <div className="container">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a className="navbar-brand" href="https://natroberts19.github.io/">Navbar</a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+
+      <div className="collapse navbar-collapse" id="navbarColor02">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="https://natroberts19.github.io/">Home
+              <span className="sr-only">(current)</span>
+            </a>
+          </li>
+          <!-- <li className="nav-item">
               <a className="nav-link" href="https://natroberts19.github.io/">Features</a>
             </li>
             <li className="nav-item">
@@ -49,51 +55,66 @@
             <li className="nav-item">
               <a className="nav-link" href="https://natroberts19.github.io/">About</a>
             </li> -->
-          </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input className="form-control mr-sm-1" type="text" placeholder="Username" />
-            <input className="form-control mr-sm-1" type="text" placeholder="Password" />
-            <button className="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
-          </form>
-        </div>
-      </nav>
+        </ul>
+        <form className="form-inline my-2 my-lg-0">
+          <input className="form-control mr-sm-1" type="text" placeholder="Username" />
+          <input className="form-control mr-sm-1" type="text" placeholder="Password" />
+          <button className="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+        </form>
+      </div>
+    </nav>
 
-        <div className="sidenav">
-            <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Dashboard</a>
-            <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Students</a>
-            <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Reports</a>
-            <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Tasks</a>
-            <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Advisor Profile</a>
-        </div>
-
-        <!-- Container to hold student report data. -->
-        <div id="buttons">
-          <button id="last-sort">Sort By Last Name</button>
-          <button id="first-sort">Sort By First Name</button>
-          <button id="less-two">Less than 2 Contacts</button>
-        </div>
-
-        <table class="table table-hover" id="results">
-          <thead>
-            <tr>
-              <th scope="col" id="student-id">Id</th>
-              <th scope="col" id="student-firstName">First Name</th>
-              <th scope="col" id="student-lastName">Last Name</th>
-              <th scope="col" id="student-phone">Phone</th>
-              <th scope="col" id="student-email">Email</th>
-              <th scope="col" id="student-status">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-            <!-- Results from DB here -->
-          </tbody>
-        </table>
-        
+     <!-- SIDENAV Dasfboard links to navigate between dashboard items. -->
+    <div className="sidenav">
+      <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Dashboard Home</a>
+      <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Manage Student</a>
+      <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Student Reports</a>
+      <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Manage Tasks</a>
+      <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav">Advisor Profile</a>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/student.js"></script>
+    <!-- REPORTS render. Navtabs Container to hold student report data. -->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#home" id="last-sort">All Students</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active show" data-toggle="tab" href="#my-students" id="my-active">My Active Students</a>
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade" id="last-sort">
+        <p></p>
+      </div>
+      <div class="tab-pane fade active show" id="my-active">
+        <p></p>
+      </div>
+    </div>
 
-  </body>
+    <table class="table table-hover" id="results">
+      <thead>
+        <tr class="table-success">
+          <th scope="col" id="student-id">Id</th>
+          <th scope="col" id="student-lastName">Last Name</th>
+          <th scope="col" id="student-firstName">First Name</th>
+          <th scope="col" id="student-phone">Phone</th>
+          <th scope="col" id="student-email">Email</th>
+          <th scope="col" id="student-status">Status</th>
+          <th scope="col" id="student-contacts">Num of Contacts</th>
+          <th scope="col" id="student-advisor">Advisor</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- Results from DB here -->
+      </tbody>
+    </table>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/reports.js"></script>
+
+</body>
+
 </html>
